@@ -7,6 +7,8 @@ var bodyParser = require('body-parser');
 var os = require('os');
 var fs = require('fs');
 var chokidar = require('chokidar');
+var multer = require('multer');
+var autoReap = require('multer-autoreap');
 
 var routes = require('./routes/index');
 
@@ -21,6 +23,8 @@ app.set('view engine', 'hbs');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(multer({ dest: '/tmp/' }).any());
+app.use(autoReap);
 app.use(cookieParser());
 app.use('/vendor', express.static(path.join(__dirname, 'node_modules')));
 app.use(express.static(path.join(__dirname, 'public')));
