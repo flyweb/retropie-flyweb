@@ -13,16 +13,16 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/files', function(req, res, next) {
+  function listFiles(path) {
+    return fs.readdirSync(path);
+  }
+
+  var files = listFiles(path);
+
   res.render('files', {
     title: 'List of Games',
     files: files
   });
 });
-
-function listFiles(path) {
-  return fs.readdirSync(path);
-}
-
-var files = listFiles(path);
 
 module.exports = router;
