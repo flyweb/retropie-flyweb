@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="960px" height="480px" viewBox="0 0 960 480" enable-background="new 0 0 960 480" xml:space="preserve">
+<rect fill="#464759" width="960" height="480"/>
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#2A282F" d="M670,278c0,104.935-85.066,190-190,190
+	c-104.934,0-190-85.065-190-190c0-104.934,85.066-190,190-190C584.934,88,670,173.066,670,278z M480,118
+	c-88.366,0-160,71.634-160,160c0,88.365,71.634,160,160,160c88.365,0,160-71.635,160-160C640,189.634,568.365,118,480,118z"/>
+<g>
+	<g>
+		<path fill="none" stroke="#FF931E" stroke-width="8" stroke-linecap="round" stroke-miterlimit="10" d="M480,103
+			c3.019,0,6.019,0.076,9,0.228"/>
+		
+			<path fill="none" stroke="#FF931E" stroke-width="8" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="17.1267,17.1267" d="
+			M506.037,104.924c78.616,11.727,140.152,75.743,148.095,155.533"/>
+		<path fill="none" stroke="#FF931E" stroke-width="8" stroke-linecap="round" stroke-miterlimit="10" d="M654.772,269
+			c0.151,2.981,0.228,5.981,0.228,9"/>
+	</g>
+</g>
+<g>
+	<g>
+		<path fill="none" stroke="#FF931E" stroke-width="8" stroke-linecap="round" stroke-miterlimit="10" d="M305,278
+			c0-3.019,0.076-6.019,0.228-9"/>
+		
+			<path fill="none" stroke="#FF931E" stroke-width="8" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="17.1267,17.1267" d="
+			M306.924,251.963c11.727-78.616,75.743-140.153,155.533-148.095"/>
+		<path fill="none" stroke="#FF931E" stroke-width="8" stroke-linecap="round" stroke-miterlimit="10" d="M471,103.228
+			c2.981-0.151,5.981-0.228,9-0.228"/>
+	</g>
+</g>
+<g>
+	<g>
+		<path fill="none" stroke="#FF931E" stroke-width="8" stroke-linecap="round" stroke-miterlimit="10" d="M480,453
+			c-3.019,0-6.019-0.076-9-0.228"/>
+		
+			<path fill="none" stroke="#FF931E" stroke-width="8" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="17.1267,17.1267" d="
+			M453.963,451.076c-78.616-11.727-140.153-75.743-148.095-155.533"/>
+		<path fill="none" stroke="#FF931E" stroke-width="8" stroke-linecap="round" stroke-miterlimit="10" d="M305.228,287
+			c-0.151-2.981-0.228-5.981-0.228-9"/>
+	</g>
+</g>
+<g>
+	<g>
+		<path fill="none" stroke="#FF931E" stroke-width="8" stroke-linecap="round" stroke-miterlimit="10" d="M655,278
+			c0,3.019-0.076,6.019-0.228,9"/>
+		
+			<path fill="none" stroke="#FF931E" stroke-width="8" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="17.1267,17.1267" d="
+			M653.076,304.037c-11.727,78.616-75.743,140.152-155.533,148.095"/>
+		<path fill="none" stroke="#FF931E" stroke-width="8" stroke-linecap="round" stroke-miterlimit="10" d="M489,452.772
+			c-2.981,0.151-5.981,0.228-9,0.228"/>
+	</g>
+</g>
+<g>
+	<path fill="#2A282F" d="M310.066,192.919L265.147,148c-23.431-23.432-23.431-61.422,0-84.853l0,0
+		c23.431-23.431,61.421-23.431,84.853,0l44.919,44.918"/>
+	<path fill="#2A282F" d="M310.068,192.919c18.372-36.623,48.233-66.483,84.856-84.854"/>
+</g>
+<path fill="#2A282F" d="M394.924,108.065c0.278-0.139,0.556-0.278,0.834-0.416"/>
+<circle fill="#FF931E" cx="307" cy="105" r="50"/>
+<circle fill="none" stroke="#2A282F" stroke-width="8" stroke-miterlimit="10" cx="480" cy="278" r="150"/>
+<circle fill="none" stroke="#2A282F" stroke-width="7" stroke-miterlimit="10" cx="480" cy="278" r="130"/>
+<circle fill="none" stroke="#2A282F" stroke-width="6" stroke-miterlimit="10" cx="480" cy="278" r="110"/>
+<circle fill="none" stroke="#2A282F" stroke-width="5" stroke-miterlimit="10" cx="480" cy="278" r="90"/>
+<circle fill="none" stroke="#2A282F" stroke-width="4" stroke-miterlimit="10" cx="480" cy="278" r="70"/>
+<polygon fill="#2A282F" points="455,321 430,278 455,235 505,235 530,278 505,321 "/>
+<rect id="dpad" x="360" y="158" opacity="0.5" fill="none" width="240" height="240"/>
+<rect id="button-a" x="255" y="53" opacity="0.5" fill="none" width="104" height="104"/>
+</svg>
