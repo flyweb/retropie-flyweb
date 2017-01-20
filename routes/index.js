@@ -1,5 +1,6 @@
 var express = require('express');
 var fs = require('fs');
+var hbs = require('fs');
 var router = express.Router();
 
 // TODO to be changed to list of games directory
@@ -13,6 +14,19 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/files', function(req, res, next) {
+  function listFiles(path) {
+    return fs.readdirSync(path);
+  }
+
+  var files = listFiles(path);
+
+  res.render('files', {
+    title: 'List of Games',
+    files: files
+  });
+});
+
+router.post('/files', function(req, res, next) {
   function listFiles(path) {
     return fs.readdirSync(path);
   }
