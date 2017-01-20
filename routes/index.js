@@ -14,7 +14,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/files', function(req, res, next) {
   res.render('files', {
-    title: 'FlyWeb All-In-One Printer',
+    title: 'List of Games',
     files: files
   });
 });
