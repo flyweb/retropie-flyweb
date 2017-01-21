@@ -110,9 +110,9 @@
 		c0,6.396-6.436,11.579-14.372,11.579h-36.665c-7.937,0-14.372-5.184-14.372-11.579l0,0
 		C474.914,314.714,481.35,309.53,489.286,309.53z"/>
 </g>
-<rect id="dpad" x="18" y="119" opacity="0.5" fill="none" width="308" height="308"/>
-<rect id="button-select" x="340" y="280" opacity="0.5" fill="none" width="83" height="80"/>
-<rect id="button-start" x="466" y="280" opacity="0.5" fill="none" width="83" height="80"/>
-<rect id="button-b" x="612" y="263" opacity="0.5" fill="none" width="112" height="112"/>
-<rect id="button-a" x="729" y="263" opacity="0.5" fill="none" width="112" height="112"/>
+<rect id="dpad" x="18" y="119" opacity="0" fill="#000000" width="308" height="308"/>
+<rect class="button" id="button-select" x="340" y="280" opacity="0" fill="#000000" width="83" height="80"/>
+<rect class="button" id="button-start" x="466" y="280" opacity="0" fill="#000000" width="83" height="80"/>
+<rect class="button" id="button-b" x="612" y="263" opacity="0" fill="#000000" width="112" height="112"/>
+<rect class="button" id="button-a" x="729" y="263" opacity="0" fill="#000000" width="112" height="112"/>
 </svg>
