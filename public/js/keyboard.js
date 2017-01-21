@@ -15,7 +15,10 @@ $(function() {
     var gamepad = new Gamepad();
 
     gamepad.socket.on('connect', function() {
-        gamepad.connectGamepad(initControls);
+        gamepad.connectGamepad(function() {
+            window.addEventListener('keydown', handleKeyDown);
+            window.addEventListener('keyup', handleKeyUp);
+        });
     })
 
     function generateDirectionObject(arrowKey, keydown) {
@@ -64,7 +67,4 @@ $(function() {
             console.error("Unknown key - " + evt.key);
         }
     };
-
-    window.addEventListener('keydown', handleKeyDown);
-    window.addEventListener('keyup', handleKeyUp);
 });
