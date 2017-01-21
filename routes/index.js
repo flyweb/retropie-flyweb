@@ -1,14 +1,18 @@
 var express = require('express');
 var fs = require('fs');
+var hbs = require('hbs');
 var router = express.Router();
 
 // TODO to be changed to list of games directory
 var path = "C:\\Users\\karui\\Desktop";
 
 /* GET / */
+
+/* GET / */
 router.get('/', function(req, res, next) {
+  var svg = fs.readFileSync('public/svg/snes.svg');
   res.render('index', {
-    title: 'FlyWeb All-In-One Printer'
+    svg: new hbs.handlebars.SafeString(svg)
   });
 });
 

@@ -248,13 +248,13 @@
 	c0.589,2.352,1.093,4.536,1.483,5.264h-3.556c-0.28-0.56-0.729-2.1-1.261-4.452c-0.531-2.464-1.429-3.248-3.389-3.304h-1.735V45
 	h-3.416L764.021,26.38L764.021,26.38z M767.438,34.724h2.045c2.322,0,3.778-1.232,3.778-3.108c0-2.072-1.456-3.024-3.694-3.024
 	c-1.093,0-1.792,0.084-2.129,0.168V34.724z"/>
-<rect id="button-l" opacity="0" fill="#F2F2F0" width="380" height="72"/>
-<rect id="button-r" x="580" opacity="0" fill="#F2F2F0" width="380" height="72"/>
+<rect class="button" id="button-l" opacity="0" fill="#F2F2F0" width="380" height="72"/>
+<rect class="button" id="button-r" x="580" opacity="0" fill="#F2F2F0" width="380" height="72"/>
 <rect id="dpad" x="24.98" y="92" opacity="0" fill="#F2F2F0" width="340" height="340"/>
-<rect id="button-select" x="379.367" y="264.303" opacity="0" fill="#F2F2F0" width="63.3" height="63.299"/>
-<rect id="button-start" x="486.64" y="264.303" opacity="0" fill="#F2F2F0" width="63.3" height="63.299"/>
-<rect id="button-x" x="702.035" y="130.117" transform="matrix(0.7071 -0.7071 0.7071 0.7071 92.9039 584.5243)" opacity="0" fill="#F2F2F0" width="100" height="100"/>
-<rect id="button-a" x="793.517" y="215.388" transform="matrix(0.7071 -0.7071 0.7071 0.7071 59.4025 674.1875)" opacity="0" fill="#F2F2F0" width="100" height="100"/>
-<rect id="button-y" x="626.364" y="206.353" transform="matrix(0.7071 -0.7071 0.7071 0.7071 16.8332 553.3459)" opacity="0" fill="#F2F2F0" width="100" height="100"/>
-<rect id="button-b" x="717.282" y="292.187" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -17.2313 642.7749)" opacity="0" fill="#F2F2F0" width="100" height="100"/>
+<rect class="button" id="button-select" x="379.367" y="264.303" opacity="0" fill="#F2F2F0" width="63.3" height="63.299"/>
+<rect class="button" id="button-start" x="486.64" y="264.303" opacity="0" fill="#F2F2F0" width="63.3" height="63.299"/>
+<rect class="button" id="button-x" x="702.035" y="130.117" transform="matrix(0.7071 -0.7071 0.7071 0.7071 92.9039 584.5243)" opacity="0" fill="#F2F2F0" width="100" height="100"/>
+<rect class="button" id="button-a" x="793.517" y="215.388" transform="matrix(0.7071 -0.7071 0.7071 0.7071 59.4025 674.1875)" opacity="0" fill="#F2F2F0" width="100" height="100"/>
+<rect class="button" id="button-y" x="626.364" y="206.353" transform="matrix(0.7071 -0.7071 0.7071 0.7071 16.8332 553.3459)" opacity="0" fill="#F2F2F0" width="100" height="100"/>
+<rect class="button" id="button-b" x="717.282" y="292.187" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -17.2313 642.7749)" opacity="0" fill="#F2F2F0" width="100" height="100"/>
 </svg>

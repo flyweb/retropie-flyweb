@@ -64,6 +64,6 @@
 <circle fill="none" stroke="#2A282F" stroke-width="5" stroke-miterlimit="10" cx="480" cy="278" r="90"/>
 <circle fill="none" stroke="#2A282F" stroke-width="4" stroke-miterlimit="10" cx="480" cy="278" r="70"/>
 <polygon fill="#2A282F" points="455,321 430,278 455,235 505,235 530,278 505,321 "/>
-<rect id="dpad" x="360" y="158" opacity="0.5" fill="none" width="240" height="240"/>
-<rect id="button-a" x="255" y="53" opacity="0.5" fill="none" width="104" height="104"/>
+<rect id="dpad" x="360" y="158" opacity="0" fill="#000000" width="240" height="240"/>
+<rect class="button" id="button-a" x="255" y="53" opacity="0" fill="#000000" width="104" height="104"/>
 </svg>
