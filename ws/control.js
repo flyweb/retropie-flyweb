@@ -3,7 +3,6 @@ module.exports = function(server) {
     var io = require('socket.io')(server);
 
     var gamepad_hub = require('../virtual_gamepad/virtual_gamepad_hub');
-
     var gp_hub = new gamepad_hub();
 
     // Handle WS messages from gamepad
