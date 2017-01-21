@@ -1,18 +1,17 @@
 module.exports = function(server) {
     // Initialize WS server
-    var io = require('socket.io')(server, {origins: '*:*'});
-    var keyboard_hub = require('../virtual_gamepad/virtual_keyboard_hub');
+    var io = require('socket.io')(server);
+
     var gamepad_hub = require('../virtual_gamepad/virtual_gamepad_hub');
 
-    var kb_hub = new keyboard_hub();
     var gp_hub = new gamepad_hub();
 
     // Handle WS messages from gamepad
     io.on('connection', function(socket) {
         socket.on('disconnect', function() {
-          if (socket.gamePadId !== 0) {
+          if (socket.gamePadId !== void 0) {
             console.info('Gamepad disconnected');
-            return gp_hub.disconnectGamepad(socket.gamePadId, function() {});   
+            return gp_hub.disconnectGamepad(socket.gamePadId, function() {});
           } else {
             return console.info('Unknown disconnect');
           }
@@ -32,7 +31,7 @@ module.exports = function(server) {
         });
         socket.on('padEvent', function(data) {
           console.info('Pad event', data);
-          if (socket.gamePadId !== 0 && data) {
+          if (socket.gamePadId !== void 0 && data) {
             return gp_hub.sendEvent(socket.gamePadId, data);
           }
         });
@@ -56,4 +55,10 @@ module.exports = function(server) {
           }
         });
     });
+
+    io.emitCurrentEmulator = function(emulator) {
+      io.emit('currentEmulator', emulator)
+    }
+
+    return io;
 }
