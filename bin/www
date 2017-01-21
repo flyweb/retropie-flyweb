@@ -30,12 +30,10 @@ if (os.platform() === 'win32') {
   var io = require('../ws/control')(server);
 
   // Watch for changes in selected emulator
-  var currentEmulatorPath = path.join(os.homedir(), 'current-emulator.txt');
-  chokidar.watch(currentEmulatorPath, { persistent: true}).on('all', (event, path) => {
-    fs.readFile(currentEmulatorPath, 'utf8', function(err, data) {
-      console.log('Current Emulator: ' + data);
-      io.emitCurrentEmulator(data);
-    });
+  chokidar.watch('/tmp/current-emulator.txt', { persistent: true}).on('all', (event, path) => {
+    var currentEmulator = fs.readFileSync('/tmp/current-emulator.txt').toString().replace(/^\s+|\s+$/g, '');
+    console.log('Current emulator: ' + currentEmulator);
+    io.emitCurrentEmulator(currentEmulator);
   });
 }
 
