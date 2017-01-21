@@ -1,6 +1,6 @@
 module.exports = function(server) {
     // Initialize WS server
-    var io = require('socket.io')(server);
+    var io = require('socket.io')(server, {origins: '*:*'});
 
     var gamepad_hub = require('../virtual_gamepad/virtual_gamepad_hub');
     var gp_hub = new gamepad_hub();
