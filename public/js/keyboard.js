@@ -14,6 +14,10 @@ var directionKeys = ["w", "a", "s", "d", "ArrowUp", "ArrowDown", "ArrowLeft", "A
 $(function() {
     var gamepad = new Gamepad();
 
+    gamepad.socket.on('connect', function() {
+        gamepad.connectGamepad(initControls);
+    })
+
     function generateDirectionObject(arrowKey, keydown) {
         switch (arrowKey) {
             case "w":
