@@ -16,7 +16,7 @@ var Gamepad = function() {
       console.log('Current Emulator Is: ' + emulator);
 
       var controllerSVG;
-      if (emulator == "lr-strella") {
+      if (emulator == "lr-stella") {
         controllerSVG = '/svg/atari2600.svg';
       } else if (emulator == 'lr-snes9x2010') {
         controllerSVG = '/svg/snes.svg';

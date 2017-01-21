@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-echo "default" > ~/current-emulator.txt
+echo "default" > /tmp/current-emulator.txt
