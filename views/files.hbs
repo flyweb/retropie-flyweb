@@ -4,14 +4,23 @@
         <h1>Games yaasssss :D</h1>
     </div>
 
-    {{#each files}}<li class="list-group-item">{{this}}</li>{{/each}}
+    {{#each files}}
+        <li class="list-group-item">{{this}}
+            <form method="post" action="/delete">
+                <button type="submit" class="right delete-button">
+                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                </button>
+            </form>
+        </li>
+    {{/each}}
+
     <br />
 
-    <form method="post" action="/files" enctype="multipart/form-data">
+    <form method="post" action="/upload" enctype="multipart/form-data">
         <div class="input-group">
             <label class="input-group-btn">
                 <span class="btn btn-primary">
-                    Browse&hellip; <input type="file" name="upload" style="display: none;" multiple>
+                    Browse&hellip; <input type="file" name="upload" class="hidden" multiple>
                 </span>
             </label>
             <input type="text" class="form-control" readonly>

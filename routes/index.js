@@ -26,7 +26,7 @@ router.get('/files', function (req, res, next) {
   });
 });
 
-router.post('/files', function (req, res, next) {
+router.post('/upload', function (req, res, next) {
   var args = [];
   var file = req.files[0];
   var filePath = args.concat(file.path);
@@ -52,6 +52,10 @@ router.post('/files', function (req, res, next) {
     title: 'List of Games',
     files: files
   });
+});
+
+router.post('/delete', function (req, res, next) {
+  console.log("received delete");
 });
 
 function listFiles(path) {
