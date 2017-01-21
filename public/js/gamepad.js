@@ -33,10 +33,10 @@ Gamepad.prototype.setButton = function(button, pushed) {
 Gamepad.prototype.setDirection = function(oldDirections, newDirections) {
     if (oldDirections.left != newDirections.left || oldDirections.right != newDirections.right) {
         var x = newDirections.left ? 0 : newDirections.right ? 255 : 127;
-        socket.emit('padEvent', {type: 0x03, code: 0x00, value: x});
+        this.socket.emit('padEvent', {type: 0x03, code: 0x00, value: x});
     }
-    if (oldDirections.up != newDirections.up || oldDirections.down != oldDirections.down) {
+    if (oldDirections.up != newDirections.up || oldDirections.down != newDirections.down) {
         var y = newDirections.up ? 0 : newDirections.down ? 255 : 127;
-        socket.emit('padEvent', {type: 0x03, code: 0x01, value: y});
+        this.socket.emit('padEvent', {type: 0x03, code: 0x01, value: y});
     }
 }
