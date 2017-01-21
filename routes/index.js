@@ -46,7 +46,6 @@ router.post('/upload', function (req, res, next) {
   // shows the file that was just uploaded first (at the top of the list)
   var files = listFiles(path);
   files.unshift(originalName);
-  console.log(files);
   res.render('files', {
     layout: 'layouts/admin',
     title: 'List of Games',
@@ -54,8 +53,30 @@ router.post('/upload', function (req, res, next) {
   });
 });
 
-router.post('/delete', function (req, res, next) {
-  console.log("received delete");
+router.post('/delete/:name', function (req, res, next) {
+  var name = req.params.name;
+  console.log("received delete for " + name);
+
+  var filePath = path + "\\" + name;
+  fs.unlink(filePath, function (err) {
+    if (err) {
+      return console.log(err);
+    }
+    console.log(name + " deleted successfully");
+  });
+
+  var files = listFiles(path);
+  var index = files.indexOf(name);
+
+  if (index > -1) {
+    files.splice(index, 1);
+  }
+  
+  res.render('files', {
+    layout: 'layouts/admin',
+    title: 'List of Games',
+    files: files
+  });
 });
 
 function listFiles(path) {
