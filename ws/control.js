@@ -35,4 +35,10 @@ module.exports = function(server) {
           }
         });
     });
+
+    io.emitCurrentEmulator = function(emulator) {
+      io.emit('currentEmulator', emulator)
+    }
+
+    return io;
 }

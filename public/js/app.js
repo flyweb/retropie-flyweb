@@ -3,6 +3,7 @@ var FullScreenController = (function() {
     ('onwebkitfullscreenchange' in document) ? 'webkitfullscreenchange' :
        ('onmozfullscreenchange' in document) ?    'mozfullscreenchange' :
                                                      'fullscreenchange';
+var socket = io();
 
   function _onTouchStart() {
     if (!window.fullScreen) {

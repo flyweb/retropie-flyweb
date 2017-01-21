@@ -4,11 +4,11 @@ $(function() {
     var dpadDirections = {up: false, down: false, left: false, right: false};
 
     function initControls() {
-        $('.button').on('touchstart', handleButtonStart);
-        $('.button').on('touchend', handleButtonEnd);
-        $('#dpad').on('touchstart', handleDpadStart);
-        $('#dpad').on('touchmove', handleDpadMove);
-        $('#dpad').on('touchend', handleDpadEnd);
+        $('#controller').on('touchstart', '.button', handleButtonStart);
+        $('#controller').on('touchend', '.button', handleButtonEnd);
+        $('#controller').on('touchstart', '#dpad', handleDpadStart);
+        $('#controller').on('touchmove', '#dpad', handleDpadMove);
+        $('#controller').on('touchend', '#dpad', handleDpadEnd);
     }
 
     gamepad.connectGamepad(initControls);
