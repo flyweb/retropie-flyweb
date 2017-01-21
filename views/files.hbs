@@ -6,7 +6,7 @@
 
     {{#each files}}
         <li class="list-group-item">{{this}}
-            <form method="post" action="/delete/{{this}}">
+            <form method="post" action="/files/delete/{{this}}">
                 <button type="submit" class="right delete-button">
                     <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
                 </button>
@@ -16,7 +16,7 @@
 
     <br />
 
-    <form method="post" action="/upload" enctype="multipart/form-data">
+    <form method="post" action="/files/upload" enctype="multipart/form-data">
         <div class="input-group">
             <label class="input-group-btn">
                 <span class="btn btn-primary">
