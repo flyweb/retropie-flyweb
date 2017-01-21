@@ -7,6 +7,8 @@ $(function () {
     });
 
     $(document).ready(function () {
+        $('li:nth-child(odd)').addClass('alternate');
+
         $(':file').on('fileselect', function (event, numFiles, label) {
 
             var input = $(this).parents('.input-group').find(':text'),
