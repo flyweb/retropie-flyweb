@@ -11,7 +11,9 @@ $(function() {
         $('#controller').on('touchend', '#dpad', handleDpadEnd);
     }
 
-    gamepad.connectGamepad(initControls);
+    gamepad.socket.on('connect', function() {
+        gamepad.connectGamepad(initControls);
+    })
 
     function copyTouch(touch) {
         return { identifier: touch.identifier, pageX: touch.pageX, pageY: touch.pageY, target: touch.target };
