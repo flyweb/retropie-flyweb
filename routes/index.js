@@ -11,6 +11,7 @@ var path = "C:\\Users\\karui\\Desktop";
 router.get('/', function(req, res, next) {
   var svg = fs.readFileSync('public/svg/snes.svg');
   res.render('index', {
+    layout: 'layouts/default',
     svg: new hbs.handlebars.SafeString(svg)
   });
 });
@@ -19,6 +20,7 @@ router.get('/files', function (req, res, next) {
   var files = listFiles(path);
 
   res.render('files', {
+    layout: 'layouts/admin',
     title: 'List of Games',
     files: files
   });
@@ -46,6 +48,7 @@ router.post('/files', function (req, res, next) {
   files.unshift(originalName);
   console.log(files);
   res.render('files', {
+    layout: 'layouts/admin',
     title: 'List of Games',
     files: files
   });
