@@ -1,2 +1,5 @@
 {{#each files}}<li>{{this}}</li>{{/each}}
-        
+<form method="post" action="/files" enctype="multipart/form-data">
+    <input type="file" name="upload"><br />
+    <button type="submit">Upload</button>
+</form>
