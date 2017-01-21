@@ -1,6 +1,6 @@
 var express = require('express');
 var fs = require('fs');
-var hbs = require('fs');
+var hbs = require('hbs');
 var router = express.Router();
 var spawn = require('child_process').spawn;
 
@@ -8,9 +8,10 @@ var spawn = require('child_process').spawn;
 var path = "C:\\Users\\karui\\Desktop";
 
 /* GET / */
-router.get('/', function (req, res, next) {
+router.get('/', function(req, res, next) {
+  var svg = fs.readFileSync('public/svg/snes.svg');
   res.render('index', {
-    title: 'FlyWeb All-In-One Printer'
+    svg: new hbs.handlebars.SafeString(svg)
   });
 });
 
@@ -40,8 +41,10 @@ router.post('/files', function (req, res, next) {
   });
 
   // show the list of files again, including the file that was just uploaded
+  // shows the file that was just uploaded first (at the top of the list)
   var files = listFiles(path);
-  files.concat(originalName);
+  files.unshift(originalName);
+  console.log(files);
   res.render('files', {
     title: 'List of Games',
     files: files

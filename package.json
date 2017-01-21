@@ -19,6 +19,7 @@
   "dependencies": {
     "blueimp-file-upload": "^9.14.2",
     "body-parser": "^1.16.0",
+    "chokidar": "^1.6.1",
     "cookie-parser": "^1.4.3",
     "express": "^4.14.0",
     "hbs": "^4.0.1",
