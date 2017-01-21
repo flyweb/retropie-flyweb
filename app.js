@@ -4,9 +4,6 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var os = require('os');
-var fs = require('fs');
-var chokidar = require('chokidar');
 var multer = require('multer');
 var autoReap = require('multer-autoreap');
 
@@ -45,14 +42,6 @@ app.use(function(err, req, res, next) {
   res.render('error', {
     message: err.message,
     error: err // Use `{}` to hide stacktraces
-  });
-});
-
-// Watch for changes in selected emulator
-var currentEmulatorPath = path.join(os.homedir(), 'current-emulator.txt');
-chokidar.watch(currentEmulatorPath, { persistent: true}).on('all', (event, path) => {
-  fs.readFile(currentEmulatorPath, 'utf8', function(err, data) {
-    console.log('Current Emulator: ' + data);
   });
 });
 
