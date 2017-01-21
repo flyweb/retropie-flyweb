@@ -1,5 +1,23 @@
-{{#each files}}<li>{{this}}</li>{{/each}}
-<form method="post" action="/files" enctype="multipart/form-data">
-    <input type="file" name="upload"><br />
-    <button type="submit">Upload</button>
-</form>
+<div class="container" style="margin: 20px; 0px;">
+
+    <div class ="jumbotron">
+        <h1>Games yaasssss :D</h1>
+    </div>
+
+    {{#each files}}<li class="list-group-item">{{this}}</li>{{/each}}
+    <br />
+
+    <form method="post" action="/files" enctype="multipart/form-data">
+        <div class="input-group">
+            <label class="input-group-btn">
+                <span class="btn btn-primary">
+                    Browse&hellip; <input type="file" name="upload" style="display: none;" multiple>
+                </span>
+            </label>
+            <input type="text" class="form-control" readonly>
+        </div>
+        <br />
+        <button type="submit" class="btn btn-default">Upload</button>
+    </form>
+
+</div>
