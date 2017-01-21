@@ -14,6 +14,14 @@ $(function() {
     gamepad.socket.on('connect', function() {
         gamepad.connectGamepad(initControls);
     })
+    initControls();
+
+    navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
+    var hapticCallback = function () {
+        if (navigator.vibrate) {
+            navigator.vibrate(50);
+        }
+    };
 
     function copyTouch(touch) {
         return { identifier: touch.identifier, pageX: touch.pageX, pageY: touch.pageY, target: touch.target };
@@ -33,6 +41,7 @@ $(function() {
             var button = touch.target.id;
             console.log(`${button} pressed`);
             gamepad.setButton(button, true);
+            hapticCallback();
         }
     }
 
@@ -90,6 +99,7 @@ $(function() {
             newDirections = getDpadDirections(touch.pageX, touch.pageY);
             gamepad.setDirection(dpadDirections, newDirections);
             dpadDirections = newDirections;
+            hapticCallback();
         }
     }
 
