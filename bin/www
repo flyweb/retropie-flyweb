@@ -1,9 +1,4 @@
 #!/usr/bin/env node
-
-/**
- * Module dependencies.
- */
-
 var app = require('../app');
 var http = require('http');
 var mdns = require('mdns');
@@ -28,6 +23,7 @@ var server = http.createServer(app);
 /*
  * Create WebSocket server.
  */
+
 if (os.platform() === 'win32') {
   console.log("OS detected as Windows. WebSocket server will not start. Run on Raspberry Pi/Linux for full functionality.")
 } else {
@@ -46,6 +42,7 @@ if (os.platform() === 'win32') {
 /**
  * Create mDNS advertisement.
  */
+
 var advertisement = mdns.createAdvertisement(mdns.tcp('flyweb'), port, {
   name: 'RetroPie FlyWeb Controller',
   txtRecord: {}

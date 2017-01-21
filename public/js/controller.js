@@ -32,8 +32,8 @@ $(function() {
         }
     }
 
-    $('.button').on('touchstart', handleButtonStart);
-    $('.button').on('touchend', handleButtonEnd);
+    $('#controller').on('touchstart', '.button', handleButtonStart);
+    $('#controller').on('touchend', '.button', handleButtonEnd);
 
     function getDpadDirections(x, y) {
         var $dpad = $('#dpad');
@@ -97,7 +97,7 @@ $(function() {
         }
     }
 
-    $('#dpad').on('touchstart', handleDpadStart);
-    $('#dpad').on('touchmove', handleDpadMove);
-    $('#dpad').on('touchend', handleDpadEnd);
+    $('#controller').on('touchstart', '#dpad', handleDpadStart);
+    $('#controller').on('touchmove', '#dpad', handleDpadMove);
+    $('#controller').on('touchend', '#dpad', handleDpadEnd);
 });
