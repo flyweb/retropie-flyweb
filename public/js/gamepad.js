@@ -21,7 +21,7 @@ Gamepad.prototype.connectGamepad = function(callback) {
         this.socket.emit('padEvent', {type: 0x03, code: 0x00, value: 127});
         this.socket.emit('padEvent', {type: 0x03, code: 0x01, value: 127});
         callback();
-    });
+    }.bind(this));
 }
 
 Gamepad.prototype.setButton = function(button, pushed) {
