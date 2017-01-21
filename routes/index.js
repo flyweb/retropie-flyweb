@@ -2,11 +2,12 @@ var express = require('express');
 var fs = require('fs');
 var hbs = require('hbs');
 var router = express.Router();
-var spawn = require('child_process').spawn;
 
 // TODO to be changed to list of games directory
 // '/home/pi/RetroPie/roms'
-var path = "C:\\Users\\karui\\Desktop";
+var path = fs.existsSync('/home/pi/RetroPie/roms') ?
+  '/home/pi/RetroPie/roms' :
+  process.cwd();
 
 /* GET / */
 router.get('/', function(req, res, next) {
@@ -53,7 +54,7 @@ router.post('/files/delete/:name', function (req, res, next) {
     }
     console.log(name + " deleted successfully");
   });
-  
+
   files = removeDeletedFileFromList(files, name);
   returnFiles(files, res);
 });
