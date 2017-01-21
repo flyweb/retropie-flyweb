@@ -5,6 +5,7 @@ var router = express.Router();
 var spawn = require('child_process').spawn;
 
 // TODO to be changed to list of games directory
+// '/home/pi/RetroPie/roms'
 var path = "C:\\Users\\karui\\Desktop";
 
 /* GET / */
