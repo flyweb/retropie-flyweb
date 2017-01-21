@@ -1,5 +1,12 @@
-{{#each files}}<li>{{this}}</li>{{/each}}
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+
+<h1>Your Amazing Games</h1>
+
+{{#each files}}<li class="list-group-item">{{this}}</li>{{/each}}
+
 <form method="post" action="/files" enctype="multipart/form-data">
     <input type="file" name="upload"><br />
     <button type="submit">Upload</button>
 </form>
+
