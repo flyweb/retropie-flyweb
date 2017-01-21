@@ -1,6 +1,17 @@
 $(function() {
+    var gamepad = new Gamepad();
     var ongoingTouches = [];
     var dpadDirections = {up: false, down: false, left: false, right: false};
+
+    function initControls() {
+        $('.button').on('touchstart', handleButtonStart);
+        $('.button').on('touchend', handleButtonEnd);
+        $('#dpad').on('touchstart', handleDpadStart);
+        $('#dpad').on('touchmove', handleDpadMove);
+        $('#dpad').on('touchend', handleDpadEnd);
+    }
+
+    gamepad.connectGamepad(initControls);
 
     function copyTouch(touch) {
         return { identifier: touch.identifier, pageX: touch.pageX, pageY: touch.pageY, target: touch.target };
@@ -19,6 +30,7 @@ $(function() {
             ongoingTouches.push(copyTouch(touch));
             var button = touch.target.id;
             console.log(`${button} pressed`);
+            gamepad.setButton(button, true);
         }
     }
 
@@ -28,12 +40,10 @@ $(function() {
             var index = findOngoingTouch(touch.identifier);
             var button = touch.target.id;
             console.log(`${button} unpressed`);
+            gamepad.setButton(button, false);
             ongoingTouches.splice(index, 1);
         }
     }
-
-    $('.button').on('touchstart', handleButtonStart);
-    $('.button').on('touchend', handleButtonEnd);
 
     function getDpadDirections(x, y) {
         var $dpad = $('#dpad');
@@ -75,7 +85,9 @@ $(function() {
         for (var i=0; i<e.originalEvent.changedTouches.length; i++) {
             var touch = e.originalEvent.changedTouches[i];
             ongoingTouches.push(copyTouch(touch));
-            dpadDirections = getDpadDirections(touch.pageX, touch.pageY);
+            newDirections = getDpadDirections(touch.pageX, touch.pageY);
+            gamepad.setDirection(dpadDirections, newDirections);
+            dpadDirections = newDirections;
         }
     }
 
@@ -84,7 +96,9 @@ $(function() {
             var touch = e.originalEvent.changedTouches[i];
             var index = findOngoingTouch(touch.identifier);
             ongoingTouches.splice(index, 1, copyTouch(touch));
-            dpadDirections = getDpadDirections(touch.pageX, touch.pageY);
+            newDirections = getDpadDirections(touch.pageX, touch.pageY);
+            gamepad.setDirection(dpadDirections, newDirections);
+            dpadDirections = newDirections;
         }
     }
 
@@ -94,10 +108,9 @@ $(function() {
             var index = findOngoingTouch(touch.identifier);
             ongoingTouches.splice(index, 1);
             console.log('dpad unpressed');
+            var newDirections = {up: false, down: false, left: false, right: false};
+            gamepad.setDirection(dpadDirections, newDirections);
+            dpadDirections = newDirections;
         }
     }
-
-    $('#dpad').on('touchstart', handleDpadStart);
-    $('#dpad').on('touchmove', handleDpadMove);
-    $('#dpad').on('touchend', handleDpadEnd);
 });
