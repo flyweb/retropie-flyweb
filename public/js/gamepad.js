@@ -18,6 +18,8 @@ Gamepad.prototype.connectGamepad = function(callback) {
     this.socket.emit('connectGamepad');
     this.socket.on('gamepadConnected', function(padId) {
         this.padId = padId;
+        this.socket.emit('padEvent', {type: 0x03, code: 0x00, value: 127});
+        this.socket.emit('padEvent', {type: 0x03, code: 0x01, value: 127});
         callback();
     });
 }
